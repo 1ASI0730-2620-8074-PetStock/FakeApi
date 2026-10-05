@@ -1,0 +1,451 @@
+{
+  "iam": {
+    "usuarios": [
+      {
+        "id_usuario": 1,
+        "nombre": "Carlos",
+        "apellidos": "Mendoza",
+        "correo_electronico": "admin@petstock.com",
+        "telefono": "+51999888777",
+        "rol": "Admin"
+      },
+      {
+        "id_usuario": 2,
+        "nombre": "María",
+        "apellidos": "Delgado",
+        "correo_electronico": "maria.d@petstock.com",
+        "telefono": "+51988776655",
+        "rol": "Vendedor"
+      },
+      {
+        "id_usuario": 3,
+        "nombre": "Jorge",
+        "apellidos": "Ramos",
+        "correo_electronico": "jorge.r@petstock.com",
+        "telefono": "+51977665544",
+        "rol": "Almacenero"
+      }
+    ],
+    "sesiones": [
+      {
+        "id_sesion": 1,
+        "id_usuario": 1,
+        "token": "bearer-token-111111",
+        "expira_en": "2026-10-06T18:00:00Z"
+      },
+      {
+        "id_sesion": 2,
+        "id_usuario": 2,
+        "token": "bearer-token-222222",
+        "expira_en": "2026-10-06T18:00:00Z"
+      },
+      {
+        "id_sesion": 3,
+        "id_usuario": 3,
+        "token": "bearer-token-333333",
+        "expira_en": "2026-10-06T18:00:00Z"
+      }
+    ],
+    "preferencias": [
+      {
+        "id_preferencia": 1,
+        "id_usuario": 1,
+        "notificaciones_activas": true,
+        "modo_oscuro": false
+      },
+      {
+        "id_preferencia": 2,
+        "id_usuario": 2,
+        "notificaciones_activas": true,
+        "modo_oscuro": true
+      },
+      {
+        "id_preferencia": 3,
+        "id_usuario": 3,
+        "notificaciones_activas": false,
+        "modo_oscuro": true
+      }
+    ]
+  },
+  "catalog": {
+    "categorias": [
+      {
+        "id_categoria": 1,
+        "nombre": "Alimentos Perro",
+        "descripcion": "Croquetas y alimento húmedo para caninos"
+      },
+      {
+        "id_categoria": 2,
+        "nombre": "Alimentos Gato",
+        "descripcion": "Croquetas y sobres para felinos"
+      },
+      {
+        "id_categoria": 3,
+        "nombre": "Accesorios",
+        "descripcion": "Correas, juguetes y camas"
+      }
+    ],
+    "productos": [
+      {
+        "id_producto": 101,
+        "nombre": "Ricocan Adulto 15kg",
+        "descripcion": "Alimento balanceado sabor carne",
+        "precio_base": 120.00,
+        "stock_actual": 25,
+        "id_categoria": 1,
+        "id_proveedor": 1
+      },
+      {
+        "id_producto": 102,
+        "nombre": "RicoCat Salmón 10kg",
+        "descripcion": "Alimento completo para gatos adultos",
+        "precio_base": 95.00,
+        "stock_actual": 3,
+        "id_categoria": 2,
+        "id_proveedor": 1
+      },
+      {
+        "id_producto": 103,
+        "nombre": "Collar Antipulgas",
+        "descripcion": "Protección para perros hasta 8 meses",
+        "precio_base": 45.00,
+        "stock_actual": 12,
+        "id_categoria": 3,
+        "id_proveedor": 2
+      }
+    ]
+  },
+  "inventory": {
+    "inventarios": [
+      {
+        "id_inventario": 1,
+        "id_producto": 101,
+        "stock_actual": 25,
+        "umbral_minimo": 5,
+        "ultima_actualizacion": "2026-10-05T10:00:00Z"
+      },
+      {
+        "id_inventario": 2,
+        "id_producto": 102,
+        "stock_actual": 3,
+        "umbral_minimo": 5,
+        "ultima_actualizacion": "2026-10-05T11:00:00Z"
+      },
+      {
+        "id_inventario": 3,
+        "id_producto": 103,
+        "stock_actual": 12,
+        "umbral_minimo": 4,
+        "ultima_actualizacion": "2026-10-04T15:00:00Z"
+      }
+    ],
+    "alertas_stock": [
+      {
+        "id_alerta": 1,
+        "id_producto": 102,
+        "nivel_alerta": "Crítico",
+        "estado_activacion": true,
+        "fecha_creacion": "2026-10-05T11:00:00Z"
+      },
+      {
+        "id_alerta": 2,
+        "id_producto": 101,
+        "nivel_alerta": "Normal",
+        "estado_activacion": false,
+        "fecha_creacion": "2026-10-01T08:00:00Z"
+      },
+      {
+        "id_alerta": 3,
+        "id_producto": 103,
+        "nivel_alerta": "Preventivo",
+        "estado_activacion": false,
+        "fecha_creacion": "2026-10-02T09:00:00Z"
+      }
+    ],
+    "proveedores": [
+      {
+        "id_proveedor": 1,
+        "id_producto": 101,
+        "id_orden": 1,
+        "nombre_empresa": "Distribuidora PetFood S.A.C.",
+        "contacto_nombre": "Luis Paredes",
+        "telefono": "+51911223344",
+        "correo": "contacto@petfood.pe"
+      },
+      {
+        "id_proveedor": 2,
+        "id_producto": 103,
+        "id_orden": 2,
+        "nombre_empresa": "Importadora Mascotas VIP",
+        "contacto_nombre": "Elena Gómez",
+        "telefono": "+51922334455",
+        "correo": "ventas@mascotasvip.pe"
+      },
+      {
+        "id_proveedor": 3,
+        "id_producto": 102,
+        "id_orden": 3,
+        "nombre_empresa": "Nutrición Animal E.I.R.L.",
+        "contacto_nombre": "Roberto Dávila",
+        "telefono": "+51933445566",
+        "correo": "pedidos@nutrianimal.pe"
+      }
+    ],
+    "ordenes_compra": [
+      {
+        "id_orden": 1,
+        "fecha_orden": "2026-10-01T08:00:00Z",
+        "estado": "Completada"
+      },
+      {
+        "id_orden": 2,
+        "fecha_orden": "2026-10-03T09:30:00Z",
+        "estado": "En camino"
+      },
+      {
+        "id_orden": 3,
+        "fecha_orden": "2026-10-05T12:00:00Z",
+        "estado": "Pendiente"
+      }
+    ],
+    "detalles_compra": [
+      {
+        "id_detalle_compra": 1,
+        "id_orden": 1,
+        "id_producto": 101,
+        "cantidad": 50,
+        "precio_costo": 85.00
+      },
+      {
+        "id_detalle_compra": 2,
+        "id_orden": 2,
+        "id_producto": 103,
+        "cantidad": 20,
+        "precio_costo": 25.00
+      },
+      {
+        "id_detalle_compra": 3,
+        "id_orden": 3,
+        "id_producto": 102,
+        "cantidad": 30,
+        "precio_costo": 65.00
+      }
+    ],
+    "recepciones_mercancia": [
+      {
+        "id_recepcion": 1,
+        "id_orden": 1,
+        "fecha_recepcion": "2026-10-02T10:00:00Z",
+        "observaciones": "Entrega en buen estado"
+      },
+      {
+        "id_recepcion": 2,
+        "id_orden": 2,
+        "fecha_recepcion": "2026-10-04T11:00:00Z",
+        "observaciones": "Recepción parcial de ítems"
+      },
+      {
+        "id_recepcion": 3,
+        "id_orden": 3,
+        "fecha_recepcion": "2026-10-05T14:00:00Z",
+        "observaciones": "Pendiente de verificación"
+      }
+    ]
+  },
+  "sales": {
+    "ventas": [
+      {
+        "id_venta": 1,
+        "id_detalle": 1,
+        "id_pago": 1,
+        "id_usuario": 2,
+        "monto_total": 120.00,
+        "metodo_pago": "Efectivo",
+        "fecha_venta": "2026-10-05T10:30:00Z"
+      },
+      {
+        "id_venta": 2,
+        "id_detalle": 2,
+        "id_pago": 2,
+        "id_usuario": 2,
+        "monto_total": 95.00,
+        "metodo_pago": "Yape",
+        "fecha_venta": "2026-10-05T11:15:00Z"
+      },
+      {
+        "id_venta": 3,
+        "id_detalle": 3,
+        "id_pago": 3,
+        "id_usuario": 1,
+        "monto_total": 45.00,
+        "metodo_pago": "Tarjeta",
+        "fecha_venta": "2026-10-05T12:00:00Z"
+      }
+    ],
+    "detalles_venta": [
+      {
+        "id_detalle": 1,
+        "id_producto": 101,
+        "cantidad": 1,
+        "precio_unitario": 120.00
+      },
+      {
+        "id_detalle": 2,
+        "id_producto": 102,
+        "cantidad": 1,
+        "precio_unitario": 95.00
+      },
+      {
+        "id_detalle": 3,
+        "id_producto": 103,
+        "cantidad": 1,
+        "precio_unitario": 45.00
+      }
+    ],
+    "pagos": [
+      {
+        "id_pago": 1,
+        "monto": 120.00,
+        "metodo_pago": "Efectivo",
+        "fecha_pago": "2026-10-05T10:30:00Z"
+      },
+      {
+        "id_pago": 2,
+        "monto": 95.00,
+        "metodo_pago": "Yape",
+        "fecha_pago": "2026-10-05T11:15:00Z"
+      },
+      {
+        "id_pago": 3,
+        "monto": 45.00,
+        "metodo_pago": "Tarjeta",
+        "fecha_pago": "2026-10-05T12:00:00Z"
+      }
+    ],
+    "turnos_caja": [
+      {
+        "id_turno": 1,
+        "id_usuario": 2,
+        "fecha_apertura": "2026-10-05T08:00:00Z",
+        "fecha_cierre": "2026-10-05T16:00:00Z",
+        "monto_inicial": 200.00,
+        "monto_final": 460.00,
+        "estado": "Cerrado"
+      },
+      {
+        "id_turno": 2,
+        "id_usuario": 2,
+        "fecha_apertura": "2026-10-04T08:00:00Z",
+        "fecha_cierre": "2026-10-04T16:00:00Z",
+        "monto_inicial": 200.00,
+        "monto_final": 500.00,
+        "estado": "Cerrado"
+      },
+      {
+        "id_turno": 3,
+        "id_usuario": 1,
+        "fecha_apertura": "2026-10-05T16:00:00Z",
+        "fecha_cierre": "2026-10-05T22:00:00Z",
+        "monto_inicial": 200.00,
+        "monto_final": 200.00,
+        "estado": "Abierto"
+      }
+    ],
+    "conciliaciones_caja": [
+      {
+        "id_conciliacion": 1,
+        "id_turno": 1,
+        "monto_esperado": 460.00,
+        "monto_real": 460.00,
+        "diferencia": 0.00
+      },
+      {
+        "id_conciliacion": 2,
+        "id_turno": 2,
+        "monto_esperado": 500.00,
+        "monto_real": 495.00,
+        "diferencia": -5.00
+      },
+      {
+        "id_conciliacion": 3,
+        "id_turno": 3,
+        "monto_esperado": 200.00,
+        "monto_real": 200.00,
+        "diferencia": 0.00
+      }
+    ]
+  },
+  "customer": {
+    "clientes": [
+      {
+        "id_cliente": 1,
+        "id_venta": 1,
+        "id_historial": 1,
+        "nombre": "Ana Torres",
+        "correo": "ana.torres@gmail.com",
+        "telefono": "+51987654321",
+        "direccion": "Av. Los Olivos 123"
+      },
+      {
+        "id_cliente": 2,
+        "id_venta": 2,
+        "id_historial": 2,
+        "nombre": "Pedro Castillo",
+        "correo": "pedro.c@gmail.com",
+        "telefono": "+51976543210",
+        "direccion": "Calle Las Flores 456"
+      },
+      {
+        "id_cliente": 3,
+        "id_venta": 3,
+        "id_historial": 3,
+        "nombre": "Lucía Méndez",
+        "correo": "lucia.m@gmail.com",
+        "telefono": "+51965432109",
+        "direccion": "Jr. Primavera 789"
+      }
+    ],
+    "historiales_cliente": [
+      {
+        "id_historial": 1,
+        "id_venta": 1,
+        "fecha_registro": "2026-10-05T10:30:00Z"
+      },
+      {
+        "id_historial": 2,
+        "id_venta": 2,
+        "fecha_registro": "2026-10-05T11:15:00Z"
+      },
+      {
+        "id_historial": 3,
+        "id_venta": 3,
+        "fecha_registro": "2026-10-05T12:00:00Z"
+      }
+    ]
+  },
+  "analytics": {
+    "reportes": [
+      {
+        "id_reporte": 1,
+        "id_usuario": 1,
+        "tipo_reporte": "Semanal de Ventas",
+        "fecha_generacion": "2026-10-05T12:00:00Z",
+        "formato_archivo": "PDF"
+      },
+      {
+        "id_reporte": 2,
+        "id_usuario": 1,
+        "tipo_reporte": "Rotación de Inventario",
+        "fecha_generacion": "2026-10-04T18:00:00Z",
+        "formato_archivo": "EXCEL"
+      },
+      {
+        "id_reporte": 3,
+        "id_usuario": 2,
+        "tipo_reporte": "Cuadre de Caja Diario",
+        "fecha_generacion": "2026-10-05T16:00:00Z",
+        "formato_archivo": "PDF"
+      }
+    ]
+  }
+}
